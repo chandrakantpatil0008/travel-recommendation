@@ -23,6 +23,15 @@
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="recommendations.html" class="nav-link active">Recommendations</a>
                 <a href="contact.html" class="nav-link">Contact Us</a>
+                
+                <!-- Search Input Box -->
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                
+                <!-- Search Button -->
+                <button type="button" id="searchBtn" class="btn-search">Search</button>
+                
+                <!-- Clear Button -->
+                <button type="button" id="clearBtn" class="btn-clear">Clear</button>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <span></span>
@@ -31,6 +40,9 @@
             </button>
         </div>
     </header>
+
+    <!-- Search Results Message -->
+    <div id="searchResults" class="search-results"></div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -46,16 +58,15 @@
             <h2 class="section-title">Beach Recommendations</h2>
             <p class="section-subtitle">Relax on beautiful beaches with crystal-clear waters and stunning views</p>
             <div class="cards-grid">
-                <!-- Beach 1 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="beach" data-name="Baga Beach Goa India beach">
                     <div class="card-image">
                         <img src="images/beach1.jpg" alt="Baga Beach Goa India with golden sunset and palm trees">
                         <span class="card-badge">Beach</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">Baga Beach, Goa</h3>
-                        <p class="card-location"> Goa, India</p>
-                        <p class="card-description">Baga Beach is one of Goa's popular coastal destinations, known for its sandy shoreline, lively atmosphere, and beautiful sunsets. The beach offers a perfect mix of relaxation and excitement for visitors.</p>
+                        <h3 class="card-title">Baga Beach</h3>
+                        <p class="card-location">📍 Goa, India</p>
+                        <p class="card-description">Baga Beach is one of Goa's popular coastal destinations, known for its sandy shoreline, lively atmosphere, and beautiful sunsets.</p>
                         <div class="card-info">
                             <h4>Why Visit?</h4>
                             <ul>
@@ -67,8 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Beach 2 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="beach" data-name="Maldives Indian Ocean beach tropical">
                     <div class="card-image">
                         <img src="images/beach2.jpg" alt="Maldives tropical beach with crystal clear turquoise water and overwater bungalows">
                         <span class="card-badge">Beach</span>
@@ -76,7 +86,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Maldives</h3>
                         <p class="card-location">📍 Indian Ocean</p>
-                        <p class="card-description">The Maldives is famous for crystal-clear waters, white sandy beaches, coral reefs, and tropical scenery. It is one of the most beautiful beach destinations in the world, offering luxury and natural beauty.</p>
+                        <p class="card-description">The Maldives is famous for crystal-clear waters, white sandy beaches, coral reefs, and tropical scenery.</p>
                         <div class="card-info">
                             <h4>Why Visit?</h4>
                             <ul>
@@ -98,8 +108,7 @@
             <h2 class="section-title">Temple Recommendations</h2>
             <p class="section-subtitle">Explore historic and culturally significant temples with stunning architecture</p>
             <div class="cards-grid">
-                <!-- Temple 1 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="temple" data-name="Meenakshi Amman Temple Madurai India temple">
                     <div class="card-image">
                         <img src="images/temple1.jpg" alt="Meenakshi Amman Temple Madurai with colorful gopuram tower">
                         <span class="card-badge">Temple</span>
@@ -107,7 +116,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Meenakshi Amman Temple</h3>
                         <p class="card-location">📍 Madurai, India</p>
-                        <p class="card-description">The Meenakshi Amman Temple is a historic Hindu temple dedicated to Goddess Meenakshi and Lord Sundareswarar. It is famous for its stunning Dravidian architecture, colorful gopurams (towers), and intricate sculptures.</p>
+                        <p class="card-description">The Meenakshi Amman Temple is a historic Hindu temple famous for its stunning Dravidian architecture, colorful gopurams, and intricate sculptures.</p>
                         <div class="card-info">
                             <h4>Why Visit?</h4>
                             <ul>
@@ -119,16 +128,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- Temple 2 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="temple" data-name="Golden Temple Amritsar India temple Sikh">
                     <div class="card-image">
                         <img src="images/temple2.jpg" alt="Golden Temple Amritsar India illuminated at night with reflection in water">
                         <span class="card-badge">Temple</span>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Golden Temple</h3>
-                        <p class="card-location"> Amritsar, India</p>
-                        <p class="card-description">The Golden Temple, also known as Sri Harmandir Sahib, is the holiest Gurdwara of Sikhism. Its stunning gold-plated architecture and serene surroundings make it one of the most visited spiritual places in the world.</p>
+                        <p class="card-location">📍 Amritsar, India</p>
+                        <p class="card-description">The Golden Temple, also known as Sri Harmandir Sahib, is the holiest Gurdwara of Sikhism with stunning gold-plated architecture.</p>
                         <div class="card-info">
                             <h4>Why Visit?</h4>
                             <ul>
@@ -150,8 +158,7 @@
             <h2 class="section-title">Country Recommendations</h2>
             <p class="section-subtitle">Discover countries with unique cultures, landscapes, and experiences</p>
             <div class="cards-grid">
-                <!-- Country 1 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="country" data-name="India Taj Mahal Agra country South Asia">
                     <div class="card-image">
                         <img src="images/country1.jpg" alt="India landmarks including Taj Mahal and colorful cultural scenes">
                         <span class="card-badge">Country</span>
@@ -159,7 +166,7 @@
                     <div class="card-body">
                         <h3 class="card-title">India</h3>
                         <p class="card-location">📍 South Asia</p>
-                        <p class="card-description">India is a land of incredible diversity, rich history, and vibrant culture. From the iconic Taj Mahal to the Himalayan mountains, India offers travelers an unforgettable mix of experiences, traditions, and natural beauty.</p>
+                        <p class="card-description">India is a land of incredible diversity, rich history, and vibrant culture with unforgettable mix of experiences.</p>
                         <div class="card-info">
                             <h4>Culture</h4>
                             <p>India is known for its diverse languages, festivals, cuisine, and traditions that vary across regions.</p>
@@ -180,8 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Country 2 -->
-                <div class="card destination-card">
+                <div class="card destination-card" data-category="country" data-name="Japan Mount Fuji Tokyo cherry blossoms country East Asia">
                     <div class="card-image">
                         <img src="images/country2.jpg" alt="Japan Mount Fuji with cherry blossoms and traditional pagoda">
                         <span class="card-badge">Country</span>
@@ -189,7 +195,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Japan</h3>
                         <p class="card-location">📍 East Asia</p>
-                        <p class="card-description">Japan is a country that beautifully blends ancient traditions with modern innovation. From cherry blossoms and temples to bustling cities and Mount Fuji, Japan offers a unique travel experience unlike any other.</p>
+                        <p class="card-description">Japan beautifully blends ancient traditions with modern innovation, offering unique travel experiences.</p>
                         <div class="card-info">
                             <h4>Culture</h4>
                             <p>Japan is famous for its respect for tradition, politeness, tea ceremonies, and unique blend of ancient and modern culture.</p>
