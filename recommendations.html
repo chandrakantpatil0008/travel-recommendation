@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel recommendations for beaches, temples, and countries.">
+    <title>Recommendations - Travel Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✈</span>
+                <span class="logo-text">Travel Explorer</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="recommendations.html" class="nav-link active">Recommendations</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                
+                <!-- Search Input Box -->
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                
+                <!-- Search Button -->
+                <button type="button" id="searchBtn" class="btn-search">Search</button>
+                
+                <!-- Clear Button -->
+                <button type="button" id="clearBtn" class="btn-clear">Clear</button>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Results Message -->
+    <div id="searchResults" class="search-results"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Travel Recommendations</h1>
+            <p>Discover our handpicked destinations for your next adventure</p>
+        </div>
+    </section>
+
+    <!-- Beach Recommendations -->
+    <section id="beaches" class="section recommendation-section">
+        <div class="container">
+            <h2 class="section-title">Beach Recommendations</h2>
+            <p class="section-subtitle">Relax on beautiful beaches with crystal-clear waters and stunning views</p>
+            <div class="cards-grid">
+                <div class="card destination-card" data-category="beach" data-name="Baga Beach Goa India beach">
+                    <div class="card-image">
+                        <img src="images/beach1.jpg" alt="Baga Beach Goa India with golden sunset and palm trees">
+                        <span class="card-badge">Beach</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Baga Beach</h3>
+                        <p class="card-location">📍 Goa, India</p>
+                        <p class="card-description">Baga Beach is one of Goa's popular coastal destinations, known for its sandy shoreline, lively atmosphere, and beautiful sunsets.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Golden sandy shoreline perfect for walking</li>
+                                <li>Vibrant nightlife and local markets</li>
+                                <li>Stunning sunset views over the Arabian Sea</li>
+                                <li>Water sports and beach activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card destination-card" data-category="beach" data-name="Maldives Indian Ocean beach tropical">
+                    <div class="card-image">
+                        <img src="images/beach2.jpg" alt="Maldives tropical beach with crystal clear turquoise water and overwater bungalows">
+                        <span class="card-badge">Beach</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Maldives</h3>
+                        <p class="card-location">📍 Indian Ocean</p>
+                        <p class="card-description">The Maldives is famous for crystal-clear waters, white sandy beaches, coral reefs, and tropical scenery.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Crystal-clear turquoise waters</li>
+                                <li>World-class coral reefs for snorkeling and diving</li>
+                                <li>Luxury overwater bungalows and resorts</li>
+                                <li>Pristine white sandy beaches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple Recommendations -->
+    <section id="temples" class="section recommendation-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Temple Recommendations</h2>
+            <p class="section-subtitle">Explore historic and culturally significant temples with stunning architecture</p>
+            <div class="cards-grid">
+                <div class="card destination-card" data-category="temple" data-name="Meenakshi Amman Temple Madurai India temple">
+                    <div class="card-image">
+                        <img src="images/temple1.jpg" alt="Meenakshi Amman Temple Madurai with colorful gopuram tower">
+                        <span class="card-badge">Temple</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Meenakshi Amman Temple</h3>
+                        <p class="card-location">📍 Madurai, India</p>
+                        <p class="card-description">The Meenakshi Amman Temple is a historic Hindu temple famous for its stunning Dravidian architecture, colorful gopurams, and intricate sculptures.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>One of the oldest and most famous temples in India</li>
+                                <li>Stunning colorful gopurams with thousands of sculptures</li>
+                                <li>Rich cultural and spiritual heritage</li>
+                                <li>Beautiful architecture dating back centuries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card destination-card" data-category="temple" data-name="Golden Temple Amritsar India temple Sikh">
+                    <div class="card-image">
+                        <img src="images/temple2.jpg" alt="Golden Temple Amritsar India illuminated at night with reflection in water">
+                        <span class="card-badge">Temple</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Golden Temple</h3>
+                        <p class="card-location">📍 Amritsar, India</p>
+                        <p class="card-description">The Golden Temple, also known as Sri Harmandir Sahib, is the holiest Gurdwara of Sikhism with stunning gold-plated architecture.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Holiest shrine of Sikhism</li>
+                                <li>Beautiful gold-plated architecture</li>
+                                <li>Peaceful and spiritual atmosphere</li>
+                                <li>Free community kitchen (Langar) serving thousands daily</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Recommendations -->
+    <section id="countries" class="section recommendation-section">
+        <div class="container">
+            <h2 class="section-title">Country Recommendations</h2>
+            <p class="section-subtitle">Discover countries with unique cultures, landscapes, and experiences</p>
+            <div class="cards-grid">
+                <div class="card destination-card" data-category="country" data-name="India Taj Mahal Agra country South Asia">
+                    <div class="card-image">
+                        <img src="images/country1.jpg" alt="India landmarks including Taj Mahal and colorful cultural scenes">
+                        <span class="card-badge">Country</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">India</h3>
+                        <p class="card-location">📍 South Asia</p>
+                        <p class="card-description">India is a land of incredible diversity, rich history, and vibrant culture with unforgettable mix of experiences.</p>
+                        <div class="card-info">
+                            <h4>Culture</h4>
+                            <p>India is known for its diverse languages, festivals, cuisine, and traditions that vary across regions.</p>
+                            <h4>Top Attractions</h4>
+                            <ul>
+                                <li>Taj Mahal, Agra</li>
+                                <li>Jaipur (Pink City)</li>
+                                <li>Kerala Backwaters</li>
+                                <li>Himalayan Mountains</li>
+                            </ul>
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Rich cultural and historical heritage</li>
+                                <li>Diverse landscapes from mountains to beaches</li>
+                                <li>Affordable travel experiences</li>
+                                <li>Delicious and varied cuisine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card destination-card" data-category="country" data-name="Japan Mount Fuji Tokyo cherry blossoms country East Asia">
+                    <div class="card-image">
+                        <img src="images/country2.jpg" alt="Japan Mount Fuji with cherry blossoms and traditional pagoda">
+                        <span class="card-badge">Country</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Japan</h3>
+                        <p class="card-location">📍 East Asia</p>
+                        <p class="card-description">Japan beautifully blends ancient traditions with modern innovation, offering unique travel experiences.</p>
+                        <div class="card-info">
+                            <h4>Culture</h4>
+                            <p>Japan is famous for its respect for tradition, politeness, tea ceremonies, and unique blend of ancient and modern culture.</p>
+                            <h4>Top Attractions</h4>
+                            <ul>
+                                <li>Mount Fuji</li>
+                                <li>Kyoto Temples</li>
+                                <li>Tokyo City</li>
+                                <li>Cherry Blossom Season</li>
+                            </ul>
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Unique blend of tradition and modernity</li>
+                                <li>Beautiful natural landscapes</li>
+                                <li>World-famous cuisine (sushi, ramen)</li>
+                                <li>Safe and clean travel environment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">Travel Explorer</h3>
+                <p class="footer-tagline">Discover beautiful places and create unforgettable memories.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>travel.explorer@example.com</p>
+                <p>+91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Travel Explorer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

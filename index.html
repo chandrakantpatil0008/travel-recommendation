@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Explorer - Discover beautiful places and create unforgettable memories.">
+    <title>Travel Explorer - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✈</span>
+                <span class="logo-text">Travel Explorer</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="recommendations.html" class="nav-link">Recommendations</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                
+                <!-- Search Input Box -->
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                
+                <!-- Search Button -->
+                <button type="button" id="searchBtn" class="btn-search">Search</button>
+                
+                <!-- Clear Button -->
+                <button type="button" id="clearBtn" class="btn-clear">Clear</button>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Results Message -->
+    <div id="searchResults" class="search-results"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Discover Your Next Adventure</h1>
+            <p class="hero-subtitle">Explore beautiful beaches, magnificent temples, and amazing countries around the world.</p>
+            <p class="hero-intro">Travel Explorer is your guide to discovering incredible destinations around the world. Whether you are looking for relaxing beaches, historic temples, or exciting countries to explore, our recommendations will help you find your next unforgettable journey.</p>
+            <a href="#beaches" class="btn btn-primary">Explore Destinations</a>
+        </div>
+    </section>
+
+    <!-- Welcome / Introduction Section -->
+    <section class="section intro-section">
+        <div class="container">
+            <h2 class="section-title">Welcome to Travel Explorer</h2>
+            <div class="intro-content">
+                <p>Travel Explorer is a travel recommendation platform designed to help you discover the world's most beautiful destinations. Our website brings together carefully curated recommendations for beaches, temples, and countries, making it easy for travelers to find places that match their interests and dreams.</p>
+                <p>Whether you are planning a relaxing beach vacation, a spiritual journey to historic temples, or an exciting adventure through a new country, Travel Explorer provides you with the information and inspiration you need to plan your perfect trip.</p>
+                <p>Our goal is to make travel discovery simple, enjoyable, and accessible to everyone. Start exploring today and create memories that will last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Cards Section -->
+    <section class="section categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore Our Recommendations</h2>
+            <p class="section-subtitle">Choose your favorite category and start planning your next journey</p>
+            <div class="cards-grid">
+                <div class="card category-card">
+                    <div class="card-icon">🏖️</div>
+                    <h3 class="card-title">Beach Recommendations</h3>
+                    <p class="card-description">Discover beautiful beaches with crystal-clear waters, soft sand, and breathtaking sunsets. Perfect for relaxation and adventure.</p>
+                    <a href="#beaches" class="btn btn-outline">Explore Beaches</a>
+                </div>
+                <div class="card category-card">
+                    <div class="card-icon">🛕</div>
+                    <h3 class="card-title">Temple Recommendations</h3>
+                    <p class="card-description">Explore historic and culturally significant temples that showcase stunning architecture and spiritual heritage.</p>
+                    <a href="#temples" class="btn btn-outline">Explore Temples</a>
+                </div>
+                <div class="card category-card">
+                    <div class="card-icon">🌍</div>
+                    <h3 class="card-title">Country Recommendations</h3>
+                    <p class="card-description">Discover countries with unique cultures, landscapes, and experiences that will leave you with unforgettable memories.</p>
+                    <a href="#countries" class="btn btn-outline">Explore Countries</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         BEACH RECOMMENDATIONS SECTION
+         ======================================== -->
+    <section id="beaches" class="section recommendation-section">
+        <div class="container">
+            <h2 class="section-title">Beach Recommendations</h2>
+            <p class="section-subtitle">Relax on beautiful beaches with crystal-clear waters and stunning views</p>
+            <div class="cards-grid">
+                <!-- Beach 1: Baga Beach -->
+                <div class="card destination-card" data-search="baga beach goa india beach">
+                    <div class="card-image">
+                        <img src="images/beach1.jpg" alt="Baga Beach Goa India">
+                        <span class="card-badge">Beach</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Baga Beach</h3>
+                        <p class="card-location">📍 Goa, India</p>
+                        <p class="card-description">Baga Beach is one of Goa's popular coastal destinations, known for its sandy shoreline, lively atmosphere, and beautiful sunsets. The beach offers a perfect mix of relaxation and excitement for visitors.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Golden sandy shoreline perfect for walking</li>
+                                <li>Vibrant nightlife and local markets</li>
+                                <li>Stunning sunset views over the Arabian Sea</li>
+                                <li>Water sports and beach activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beach 2: Maldives -->
+                <div class="card destination-card" data-search="maldives indian ocean beach tropical">
+                    <div class="card-image">
+                        <img src="images/beach2.jpg" alt="Maldives tropical beach">
+                        <span class="card-badge">Beach</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Maldives</h3>
+                        <p class="card-location">📍 Indian Ocean</p>
+                        <p class="card-description">The Maldives is famous for crystal-clear waters, white sandy beaches, coral reefs, and tropical scenery. It is one of the most beautiful beach destinations in the world, offering luxury and natural beauty.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Crystal-clear turquoise waters</li>
+                                <li>World-class coral reefs for snorkeling and diving</li>
+                                <li>Luxury overwater bungalows and resorts</li>
+                                <li>Pristine white sandy beaches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TEMPLE RECOMMENDATIONS SECTION
+         ======================================== -->
+    <section id="temples" class="section recommendation-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Temple Recommendations</h2>
+            <p class="section-subtitle">Explore historic and culturally significant temples with stunning architecture</p>
+            <div class="cards-grid">
+                <!-- Temple 1 -->
+                <div class="card destination-card" data-search="meenakshi amman temple madurai india temple">
+                    <div class="card-image">
+                        <img src="images/temple1.jpg" alt="Meenakshi Amman Temple Madurai">
+                        <span class="card-badge">Temple</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Meenakshi Amman Temple</h3>
+                        <p class="card-location">📍 Madurai, India</p>
+                        <p class="card-description">The Meenakshi Amman Temple is a historic Hindu temple dedicated to Goddess Meenakshi and Lord Sundareswarar. It is famous for its stunning Dravidian architecture, colorful gopurams (towers), and intricate sculptures.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>One of the oldest and most famous temples in India</li>
+                                <li>Stunning colorful gopurams with thousands of sculptures</li>
+                                <li>Rich cultural and spiritual heritage</li>
+                                <li>Beautiful architecture dating back centuries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temple 2 -->
+                <div class="card destination-card" data-search="golden temple amritsar india temple sikh">
+                    <div class="card-image">
+                        <img src="images/temple2.jpg" alt="Golden Temple Amritsar">
+                        <span class="card-badge">Temple</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Golden Temple</h3>
+                        <p class="card-location">📍 Amritsar, India</p>
+                        <p class="card-description">The Golden Temple, also known as Sri Harmandir Sahib, is the holiest Gurdwara of Sikhism. Its stunning gold-plated architecture and serene surroundings make it one of the most visited spiritual places in the world.</p>
+                        <div class="card-info">
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Holiest shrine of Sikhism</li>
+                                <li>Beautiful gold-plated architecture</li>
+                                <li>Peaceful and spiritual atmosphere</li>
+                                <li>Free community kitchen (Langar) serving thousands daily</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         COUNTRY RECOMMENDATIONS SECTION
+         ======================================== -->
+    <section id="countries" class="section recommendation-section">
+        <div class="container">
+            <h2 class="section-title">Country Recommendations</h2>
+            <p class="section-subtitle">Discover countries with unique cultures, landscapes, and experiences</p>
+            <div class="cards-grid">
+                <!-- Country 1 -->
+                <div class="card destination-card" data-search="india taj mahal agra country south asia">
+                    <div class="card-image">
+                        <img src="images/country1.jpg" alt="India landmarks">
+                        <span class="card-badge">Country</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">India</h3>
+                        <p class="card-location">📍 South Asia</p>
+                        <p class="card-description">India is a land of incredible diversity, rich history, and vibrant culture. From the iconic Taj Mahal to the Himalayan mountains, India offers travelers an unforgettable mix of experiences, traditions, and natural beauty.</p>
+                        <div class="card-info">
+                            <h4>Culture</h4>
+                            <p>India is known for its diverse languages, festivals, cuisine, and traditions that vary across regions.</p>
+                            <h4>Top Attractions</h4>
+                            <ul>
+                                <li>Taj Mahal, Agra</li>
+                                <li>Jaipur (Pink City)</li>
+                                <li>Kerala Backwaters</li>
+                                <li>Himalayan Mountains</li>
+                            </ul>
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Rich cultural and historical heritage</li>
+                                <li>Diverse landscapes from mountains to beaches</li>
+                                <li>Affordable travel experiences</li>
+                                <li>Delicious and varied cuisine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Country 2 -->
+                <div class="card destination-card" data-search="japan mount fuji tokyo cherry blossoms country east asia">
+                    <div class="card-image">
+                        <img src="images/country2.jpg" alt="Japan Mount Fuji">
+                        <span class="card-badge">Country</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Japan</h3>
+                        <p class="card-location">📍 East Asia</p>
+                        <p class="card-description">Japan is a country that beautifully blends ancient traditions with modern innovation. From cherry blossoms and temples to bustling cities and Mount Fuji, Japan offers a unique travel experience unlike any other.</p>
+                        <div class="card-info">
+                            <h4>Culture</h4>
+                            <p>Japan is famous for its respect for tradition, politeness, tea ceremonies, and unique blend of ancient and modern culture.</p>
+                            <h4>Top Attractions</h4>
+                            <ul>
+                                <li>Mount Fuji</li>
+                                <li>Kyoto Temples</li>
+                                <li>Tokyo City</li>
+                                <li>Cherry Blossom Season</li>
+                            </ul>
+                            <h4>Why Visit?</h4>
+                            <ul>
+                                <li>Unique blend of tradition and modernity</li>
+                                <li>Beautiful natural landscapes</li>
+                                <li>World-famous cuisine (sushi, ramen)</li>
+                                <li>Safe and clean travel environment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Travel With Us Section -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">Why Travel With Us</h2>
+            <p class="section-subtitle">We make your travel planning simple and inspiring</p>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">⭐</div>
+                    <h3 class="benefit-title">Carefully Selected Destinations</h3>
+                    <p class="benefit-text">We handpick each destination to ensure quality experiences.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🔍</div>
+                    <h3 class="benefit-title">Easy Travel Discovery</h3>
+                    <p class="benefit-text">Find your perfect destination quickly with our organized recommendations.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎭</div>
+                    <h3 class="benefit-title">Cultural Experiences</h3>
+                    <p class="benefit-text">Immerse yourself in local cultures and traditions around the world.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <h3 class="benefit-title">Inspiring Adventures</h3>
+                    <p class="benefit-text">Get inspired to explore new places and create unforgettable memories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">Travel Explorer</h3>
+                <p class="footer-tagline">Discover beautiful places and create unforgettable memories.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>travel.explorer@example.com</p>
+                <p>+91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Travel Explorer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
