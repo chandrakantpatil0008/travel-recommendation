@@ -51,6 +51,109 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ========================================
+    // Search Functionality
+    // ========================================
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const searchResults = document.getElementById('searchResults');
+    const destinationCards = document.querySelectorAll('.destination-card');
+    const recommendationSections = document.querySelectorAll('.recommendation-section');
+
+    // Search Button Click
+    if (searchBtn) {
+        searchBtn.addEventListener('click', performSearch);
+    }
+
+    // Search on Enter key press
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        });
+    }
+
+    // Clear Button Click
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearSearch);
+    }
+
+    // Perform Search Function
+    function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        
+        if (query === '') {
+            searchResults.innerHTML = '<div class="no-result">⚠️ Please enter a destination to search.</div>';
+            return;
+        }
+        
+        let matchCount = 0;
+        
+        // Filter destination cards
+        destinationCards.forEach(function (card) {
+            const cardSearch = card.getAttribute('data-search').toLowerCase();
+            const cardTitle = card.querySelector('.card-title').textContent.toLowerCase();
+            const cardLocation = card.querySelector('.card-location').textContent.toLowerCase();
+            const cardDescription = card.querySelector('.card-description').textContent.toLowerCase();
+            
+            if (cardSearch.includes(query) || 
+                cardTitle.includes(query) || 
+                cardLocation.includes(query) ||
+                cardDescription.includes(query)) {
+                card.classList.remove('hidden');
+                matchCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        // Hide entire sections if all cards in them are hidden
+        recommendationSections.forEach(function (section) {
+            const visibleCards = section.querySelectorAll('.destination-card:not(.hidden)');
+            if (visibleCards.length === 0) {
+                section.classList.add('all-hidden');
+            } else {
+                section.classList.remove('all-hidden');
+            }
+        });
+        
+        // Show results message
+        if (matchCount > 0) {
+            searchResults.innerHTML = `<div class="result-message">✅ Found ${matchCount} destination(s) matching "${searchInput.value}".</div>`;
+            
+            // Scroll to first visible section
+            const firstVisibleSection = document.querySelector('.recommendation-section:not(.all-hidden)');
+            if (firstVisibleSection) {
+                firstVisibleSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            searchResults.innerHTML = `<div class="no-result">❌ No destinations found for "${searchInput.value}".</div>`;
+        }
+    }
+
+    // Clear Search Function
+    function clearSearch() {
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+        
+        // Show all destination cards
+        destinationCards.forEach(function (card) {
+            card.classList.remove('hidden');
+        });
+        
+        // Show all sections
+        recommendationSections.forEach(function (section) {
+            section.classList.remove('all-hidden');
+        });
+        
+        // Focus back on search input
+        if (searchInput) {
+            searchInput.focus();
+        }
+    }
+
+    // ========================================
     // Contact Form Validation
     // ========================================
     const contactForm = document.getElementById('contactForm');
